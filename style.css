@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --skrew-bg: #130c22;
+}
+
+body {
+  font-family: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--skrew-bg);
+  background-image: radial-gradient(at 50% 0%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+                    radial-gradient(at 0% 100%, rgba(99, 102, 241, 0.08) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #f3f4f6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom Scrollbar for list scrollings */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Chrome, Safari, Edge, Opera: Remove number input spin buttons */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox: Remove number input spin buttons */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Mobile Safe Areas adaptation */
+.safe-top {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Custom animations for list enter */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Arabic text tweaks for letter-spacing (Cairo font looks better without negative tracking) */
+[dir="rtl"] {
+  letter-spacing: 0em !important;
+}
+
+/* Ripple/click effect utility for buttons */
+.btn-active-effect:active {
+  transform: scale(0.98);
+  opacity: 0.95;
+}

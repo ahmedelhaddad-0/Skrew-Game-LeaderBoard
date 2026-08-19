@@ -1,0 +1,26 @@
+{
+  "name": "سكرو - لوحة الصدارة",
+  "short_name": "سكرو",
+  "description": "حاسبة نقاط ولوحة صدارة للعبة الورق الشهيرة سكرو",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a0f2e",
+  "theme_color": "#1a0f2e",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
